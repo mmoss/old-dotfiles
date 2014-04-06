@@ -1,0 +1,5 @@
+<% print("SSH hosts with specific identities (separated by spaces): "); STDOUT.flush; STDIN.gets.chomp.split(' ').each do |host| %>
+Host <%= host %>
+  IdentityFile <%= ENV['HOME'] %>/.ssh/<%= print("Identity file name for #{host} (default is id_rsa): "); STDOUT.flush; STDIN.gets.chomp %>
+  IdentitiesOnly yes
+<% end %>
