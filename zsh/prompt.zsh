@@ -17,7 +17,7 @@ precmd () {
 }
 
 function ruby_version_info() {
-  local ver=$(rbenv version-name)
+  local ver=`~/.rvm/bin/rvm-prompt`
   echo "[$ver]"
 }
 

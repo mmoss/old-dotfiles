@@ -21,9 +21,13 @@ task :brew do
     msg "Installing homebrew"
     eval `curl -fsSL https://raw.github.com/mxcl/homebrew/go`
     puts `brew doctor`
-    brew_packages = %w(git rbenv rbenv-gem-rehash ruby-build tmux vim zsh)
+    brew_packages = %w(git tmux vim zsh)
     puts `brew install #{brew_packages.join ' '}`
   end
+end
+
+task :rvm do
+  puts `curl -sSL https://get.rvm.io | bash -s stable`
 end
 
 desc "Install ZSH"
