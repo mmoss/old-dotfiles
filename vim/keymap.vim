@@ -8,4 +8,3 @@ inoremap <c-t> :CommandT<CR>
 noremap <c-s> :update<CR>
 vnoremap <c-s> <c-c>:update<CR>
 inoremap <c-s> <c-o>:Update<CR><CR>
- 
